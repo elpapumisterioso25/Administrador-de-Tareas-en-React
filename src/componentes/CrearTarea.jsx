@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
 
-const TaskFormModal = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
+const CrearTarea = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [formError, setFormError] = useState('');
@@ -84,8 +84,8 @@ const TaskFormModal = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
             <button type="button" onClick={onClose} className="py-2 px-4 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">
                 Cancelar
             </button>
-            <button type="submit" className="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">
-                {initialTask ? 'Guardar' : 'Añadir'}
+            <button type="submit" className="py-2 px-4 bg-green-500 text-white rounded hover:bg-green-600">
+                {initialTask ? 'Guardar' : 'Crear'}
             </button>
         </div>
         </form>
@@ -95,4 +95,4 @@ const TaskFormModal = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
   );
 };
 
-export default TaskFormModal;
+export default CrearTarea;

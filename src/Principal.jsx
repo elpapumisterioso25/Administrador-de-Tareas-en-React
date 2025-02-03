@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import TaskList from './componentes/TaskList';
-import TaskFormModal from './componentes/TaskFormModal';
+import TaskList from './componentes/ListaTareas';
+import TaskFormModal from './componentes/CrearTarea';
 import useLocalStorage from './hook/useLocalStorage';
-import FilterTabs from './componentes/FilterTabs';
+import FilterTabs from './componentes/Filtro';
 
 function Principal() {
   const [tasks, setTasks] = useLocalStorage('tasks', []);
@@ -80,7 +80,7 @@ function Principal() {
       <h1 className="text-3xl font-bold text-center mb-6">Administrador de Tareas</h1>
       <div className="mb-4">
         <button onClick={handleOpenModal} className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 mb-4">
-            Añadir Nueva Tarea
+            Crear tarea <strong>+</strong>
         </button>
          <FilterTabs activeFilter={activeFilter} onFilterChange={handleFilterChange}/>
         <TaskList

@@ -1,7 +1,7 @@
 import React from 'react';
-import TaskItem from './TaskItem';
+import TaskItem from './Botones';
 
-const TaskList = ({ tasks, onToggleStatus, onEdit, onDelete }) => {
+const ListaTareas = ({ tasks, onToggleStatus, onEdit, onDelete }) => {
   return (
     <div className="mt-4">
       {tasks.length === 0 ? (
@@ -21,4 +21,4 @@ const TaskList = ({ tasks, onToggleStatus, onEdit, onDelete }) => {
   );
 };
 
-export default TaskList;
+export default ListaTareas;

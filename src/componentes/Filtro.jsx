@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterTabs = ({ activeFilter, onFilterChange }) => {
+const Filtro = ({ activeFilter, onFilterChange }) => {
   return (
     <div className="flex justify-center space-x-4 mb-4">
       <button
@@ -37,4 +37,4 @@ const FilterTabs = ({ activeFilter, onFilterChange }) => {
   );
 };
 
-export default FilterTabs;
+export default Filtro;
