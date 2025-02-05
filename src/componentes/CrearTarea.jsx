@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const CrearTarea = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [status, setStatus] = useState('pending'); // Estado por defecto: Pendiente
+  const [status, setStatus] = useState('pending'); 
   const [formError, setFormError] = useState('');
   const modalRef = useRef(null);
 
@@ -12,11 +12,11 @@ const CrearTarea = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
     if (initialTask) {
       setName(initialTask.name);
       setDescription(initialTask.description);
-      setStatus(initialTask.completed ? 'completed' : 'pending'); // Cargar el estado de la tarea
+      setStatus(initialTask.completed ? 'completed' : 'pending');
     } else {
       setName('');
       setDescription('');
-      setStatus('pending'); // Estado predeterminado para nuevas tareas
+      setStatus('pending'); 
     }
   }, [initialTask]);
 
@@ -49,7 +49,7 @@ const CrearTarea = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
       id: initialTask?.id || Date.now(),
       name,
       description,
-      completed: status === 'completed', // Guarda el estado de la tarea como booleano
+      completed: status === 'completed',
     });
     onClose();
   };
@@ -88,7 +88,7 @@ const CrearTarea = ({ isOpen, onClose, onSubmit, initialTask = null }) => {
             />
           </div>
 
-          {/* Selector de Estado */}
+     
           <div className="mb-4">
             <label htmlFor="status" className="block text-gray-700 font-medium mb-1">
               Estado:
